@@ -1,0 +1,110 @@
+/* Lógica de Mobile first */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+h1{
+    font-size: 24px;
+}
+
+.conteudo{
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.grid-item{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+.vermelho{ background-color: #f95151;}
+.bege{ background-color: #f5ceba;}
+.verde { background-color: #63f44b;}
+.azul{ background-color: #1488ca;}
+.amarela { background-color: #f8ab08;}
+.roxa { background-color: #730BA3;}
+
+
+
+
+/* Media querie para o tamanho das paginas em tablets*/
+@media (min-width: 768px){
+    .conteudo{
+        width: 70%;
+    }
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Querie para o tamanho das paginas em desktop*/
+@media (min-width: 1024px){
+    .conteudo{
+         width: 50%;
+    } 
+    .grid-container{
+         grid-template-columns: repeat(6, 1fr);
+    }
+ }
+ 
+
+/* Aplicando responsividade para todos os titulos em diferentes tamanhos*/
+@media (min-width: 768px){
+    h1{
+        font-size: 36px;
+    }
+}
+@media (min-width: 1024px){
+    h1{
+        font-size: 42px;
+    }
+}
+
+@media print{
+    .grid-container{
+        border: 10px solid black;
+        border-radius: 20px;
+        padding: 40px;
+    }
+    .vermelho{
+        border: 10px solid #f95151;
+    }
+    .bege{
+        border: 10px solid #f5ceba;
+    }
+    .verde{
+        border: 10px solid #63f44b;
+    }
+    .azul{
+        border: 10px solid #1488ca;
+    }
+    .amarela{
+        border: 10px solid #f8ab08;
+    }
+    .roxa{
+        border: 10px solid #730BA3;
+    }
+}
